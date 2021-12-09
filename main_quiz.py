@@ -1,17 +1,43 @@
+# marvel quiz
+
+# importing quiz questions from dictionary
 from quiz_dictionary import questions
+
+# importing images to show up when you reach the end of quiz
+from PIL import Image
+
+# importing emojis 
+import emoji
+
 
 def total(value):
     if value == 5000:
         print("It's " + characters[0])
 
+        olaf = Image.open("images/captain-america.jpg") #image belonging to captain america
+        olaf.show()
+        print(emoji.emojize("Woww! :grinning_face_with_big_eyes:"))
+
     if value == 3000:
-        print("It's " + characters[1])
+        print("It's " + characters[3])
+
+        olaf = Image.open("images/ironman.jpg") #image belonging to ironman
+        olaf.show()
+        print(emoji.emojize("Yipeee! \U0001F60E"))
 
     if value == 1000:
-        print("It's " + characters[2])
+        print("It's " + characters[1])
+
+        olaf = Image.open("images/hulk.jpg") #image belonging to hulk
+        olaf.show()
+        print(emoji.emojize("Hurray! \U0001f600"))
 
     if value == 8000:
-        print("It's " + characters[3])
+        print("It's " + characters[2])
+
+        olaf = Image.open("images/thor.jpg") #image belonging to thor
+        olaf.show()
+        print(emoji.emojize("Yassss! \U0001F60E"))
 
 
 
@@ -22,9 +48,10 @@ def total(value):
 
 quiz_total = 0
 
+# characters array
 characters = ["Captain America", "Hulk", "Thor", "Ironman"]
-images = []
 
+# game starts
 print ("THE ULTIMATE MARVEL QUIZ GUESSING GAME WELCOMES YOU!")
 print ("How to play: just answer the questions with a YES or NO & we will guess the character you're thinking about. That's it!")
 print ("HAVE FUN! 3...2...1...START!")
